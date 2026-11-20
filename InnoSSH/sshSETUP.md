@@ -14,10 +14,14 @@ P.S.
 1. sudo nano /etc/ssh/sshd_config
 2. 'PermitRootLogin prohibit-password'
 3. Вот это 
-```sudo tee /etc/ssh/sshd_config.d/99-disable-root-password.conf > /dev/null << 'EOF'
+```bash
+sudo tee /etc/ssh/sshd_config.d/99-disable-root-password.conf > /dev/null << 'EOF'
 PermitRootLogin prohibit-password
 PasswordAuthentication no
-EOF```
+EOF
+```
 4. Перезапуск ssh
-```sudo systemctl restart ssh```
+```bash
+sudo systemctl restart ssh
+```
 
